@@ -1,0 +1,53 @@
+
+
+.card-img-top {
+    max-width: 250px; /* ajustez cette valeur selon vos besoins */
+    height: 250px; /* assure que la hauteur est ajustée automatiquement */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border-radius: 25px ;
+
+  }
+  /* Animation au survol des cartes */
+.card:hover {
+    transform: translateY(-5px); /* Déplacer la carte vers le haut au survol */
+    transition: transform 0.3s ease; /* Transition fluide de l'animation */
+  }
+  
+  /* Animation au survol des images */
+  .card-img-top:hover {
+    transform: scale(1.1); /* Zoom sur l'image au survol */
+    transition: transform 0.3s ease; /* Transition fluide de l'animation */
+  }
+  
+  /* Animation au survol des boutons */
+  .btn:hover {
+    background-color: #007bff; /* Changement de couleur de fond */
+    color: #fff; /* Changement de couleur du texte */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition fluide de l'animation */
+  }
+
+  .marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    direction: ltr; /* Définir la direction du texte de droite à gauche */
+  }
+
+  .marquee span {
+    display: inline-block;
+    animation: marquee-arabic 20s linear infinite;
+  }
+
+  @keyframes marquee-arabic {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  /* Ajustement de la vitesse sur de petits écrans */
+  @media (max-width: 768px) {
+    .marquee span {
+      animation-duration: 40s;
+    }
+  }
